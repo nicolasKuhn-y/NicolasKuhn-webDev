@@ -3,6 +3,13 @@ const cardContainer = document.querySelector(".card-container")
 const skillSection = document.querySelector(".skills-container");
 
 
+const hamburgerBtn= document.querySelector(".hamburger-btn");
+const list = document.querySelector(".nav-list");
+
+hamburgerBtn.addEventListener("click", () => {
+    list.classList.toggle("show");
+})
+
 const generateCard = arrayOfObjects => {
 
     arrayOfObjects.map(data => {
