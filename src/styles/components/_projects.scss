@@ -4,12 +4,10 @@
     @include flexAlignment(column, center, center);
     padding: 4.5rem 0;
 
-    h2{
+    h2 {
         margin-bottom: 4rem;
     }
 }
-
-
 
 .card {
     width: 18rem;
@@ -42,36 +40,24 @@
 
 .card .hover-content {
     @include flexAlignment(row, space-between, center);
-    padding: 8px 12px;
-}
-
-.card p {
-    margin: 0;
-    line-height: 1.5;
 }
 
 .card:hover img,
 .card:focus-within img {
-    margin-top: -80px;
+    margin-top: -4rem;
 }
 
-.card:hover h3,
-.card:focus-within h3 {
-    padding: 8px 12px;
-}
 .projects-links {
     @include linkBtn();
 }
 
-.card-container{
-    @include flexAlignment(row, space-around, center);
+.card-container {
+    @include flexAlignment(row wrap, space-around, center);
     width: 100%;
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px){
-
-    .card-container{
-        @include flexAlignment(column, center, center)
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .card-container {
+        @include flexAlignment(column, center, center);
     }
-
 }

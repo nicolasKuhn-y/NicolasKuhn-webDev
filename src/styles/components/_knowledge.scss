@@ -15,23 +15,21 @@
     height: 3.5rem;
 
     .skill-container {
-        @include flexAlignment(row, space-between , center);
+        @include flexAlignment(row, space-between, center);
         width: 15%;
         margin-left: 1rem;
-        i{
+        i {
             color: $darkPurple;
         }
     }
-
 }
 
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .skill-row {
+        width: 75%;
 
-@media screen and (min-width: 320px) and (max-width: 425px){
-
-
-    .skill-row{
-        width: 80%;
+        .skill-container {
+            width: 65%;
+        }
     }
-
-
 }

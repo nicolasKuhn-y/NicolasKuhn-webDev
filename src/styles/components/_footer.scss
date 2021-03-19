@@ -1,18 +1,15 @@
 @import "../mixins&variables";
 
-
-.footer-container{
+.footer-container {
     @include flexCenter();
     background-color: $darkPurple;
     height: 2rem;
-    
 
-
-    p{
-        color:white;
+    p {
+        color: #ffffff;
     }
 
-    span{
+    span {
         color: $ligthRed;
     }
 }
