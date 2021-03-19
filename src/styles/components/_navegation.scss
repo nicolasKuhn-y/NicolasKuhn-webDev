@@ -1,0 +1,79 @@
+@import "../mixins&variables";
+
+header {
+    @include flexCenter();
+    position: sticky;
+    top: 0;
+    min-height: 5rem;
+    background-color: $darkPurple;
+    z-index: 9999;
+}
+
+nav.desktop-nav {
+    width: 100%;
+    @include flexCenter();
+}
+
+.nav-list  {
+    @include flexAlignment(row, space-between, none);
+    width: 50%;
+}
+
+ul > li {
+    list-style: none;
+    font-size: 1.4rem;
+    flex: 0.1 1 auto;
+    font-weight: 700;
+}
+
+.navegation-links a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    border-bottom: 0.3rem solid $ligthRed;
+}
+
+.navegation-links a:hover {
+    color: #ffffff;
+    top: 0.2rem;
+    border-bottom: 0.18rem solid $ligthRed;
+}
+
+.mobile-menu{
+    display: none;
+
+    i{
+        color: white;
+    }
+}
+
+@media Screen and (min-width: 768px) and (max-width: 1024px){
+    .nav-list  {
+        
+        width: 80%;
+    }
+}
+
+@media Screen and (min-width: 320px) and (max-width: 425px){
+
+
+    .nav-list{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: flex;
+        width: 100%;
+        margin-left: 0.5rem;
+    
+        i{
+            color: white;
+        }
+    }
+
+
+    ul > li{
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,37 @@
+@import "../mixins&variables";
+@import "../mixins&variables";
+
+.skills-container {
+    @include flexAlignment(column wrap, none, center);
+    padding: 3rem 0;
+}
+
+.skill-row {
+    @include flexAlignment(row, none, center);
+    width: 60%;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 20px 30px 5px rgba(189, 189, 189, 0.53);
+    height: 3.5rem;
+
+    .skill-container {
+        @include flexAlignment(row, space-between , center);
+        width: 15%;
+        margin-left: 1rem;
+        i{
+            color: $darkPurple;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+
+
+    .skill-row{
+        width: 80%;
+    }
+
+
+}

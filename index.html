@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Nicolas kuhn webDev">
+    <meta name="description" content="Portfolio personal creado y diseñado íntegramente por Nicolas Kuhn">
+    <meta name="keywords" content="Portfolio, html, css, javaScript, diseño">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="Nicolas Kuhn">
+
+    <title>Nicolas Kuhn webDev</title>
+
+    <link rel="shortcut icon" href="/src/images/favicon-code.ico" />
+    <link rel="stylesheet" href="src/styles/main.css">
+    <!------------FONT AWESOME--------------------->
+    <script src="https://kit.fontawesome.com/41393c99d2.js" crossorigin="anonymous"></script>
+
+    <!------------SCROLL REVEAL--------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <header class="navegation-container">
+        <nav class="desktop-nav">
+
+            <div class="mobile-menu">
+
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+
+
+            <ul class="nav-list">
+                <li class="navegation-links">
+                    <a href="#">Home</a>
+                </li>
+                <li class="navegation-links">
+                    <a href="#about-me">Sobre mi</a>
+                </li>
+                <li class="navegation-links">
+                    <a href="#knowledge">Conocimientos</a>
+                </li>
+                <li class="navegation-links">
+                    <a href="#projects-title">Proyectos</a>
+                </li>
+                <li class="navegation-links">
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <section class="aboutMe-container" id="about-me">
+
+
+            <div class="image-container">
+
+                <ul class="links">
+                    <li>
+                        <a href="https://github.com/nicolasKuhn-y?tab=repositories" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicol%C3%A1s-k%C3%BChn/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <img src="src/images/undraw_Code_thinking_re_gka2.svg" alt="foto personal">
+
+            </div>
+
+            <div class="information-container">
+                <h2>Nicolas Kuhn</h2>
+                <h3 class="red-letter">Desarrollador web</h3>
+                <div class="description">
+                    <p>
+                        Hola me llamo Nicolas y bienvenido a mi portafolio. Aca podras ver tanto las herramientas con
+                        las
+                        cuales me manejo actualmente asi como proyectos en donde llevo a la practica todo lo que se.
+                        A principios del <span class="purple-highlighted">2020</span> descubri en la programacion un
+                        area llena
+                        de
+                        oportunidades de
+                        crecimiento y desarrollo profesional. Por esto actualmente me encuentro estudiando una
+                        <span class="purple-highlighted">Tecnicatura Universitaria en desarrollo web</span> que ofrece
+                        la
+                        Universidad Nacional de La
+                        Matanza y sumado a eso estudio de manera autodidacta para poder perfeccionar mis habilidades.
+                    </p>
+
+
+                </div>
+
+                <div class="btn-container">
+                    <button class="cv-button">Descargar CV</button>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="skills-container">
+            <h2 id="knowledge">Mis conocimientos</h4>
+        </section>
+
+        <section class="projects-container">
+            <h2 id="projects-title">Proyectos realizados</h2>
+
+            <div class="card-container"></div>
+        </section>
+
+
+        <section class="contact-container" id="contact">
+
+            <h2>Contacto</h2>
+            <form method="POST" action="https://formspree.io/f/xzbknnoa" class="form">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required>
+
+                <label for="mensaje"> Mensaje </label>
+                
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+                <button type="submit">Enviar</button>
+
+
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <footer class="footer-container">
+        <p>Hecho con <span>&#9829;</span> por Nicolas Kuhn</p>
+    </footer>
+
+    <script src="src/script/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+@import "../mixins&variables";
+
+
+.footer-container{
+    @include flexCenter();
+    background-color: $darkPurple;
+    height: 2rem;
+    
+
+
+    p{
+        color:white;
+    }
+
+    span{
+        color: $ligthRed;
+    }
+}
