@@ -101,6 +101,7 @@ nav.desktop-nav {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+    overflow-y: hidden;
   }
   .nav-list.show li {
     margin-bottom: 1rem;
