@@ -1,5 +1,6 @@
 $darkPurple: #440a67;
 $ligthRed: #fa1e0e;
+$darkRed: #c40d00;
 
 $largerHeading: 3rem;
 $normalHeading: 2rem;
@@ -21,7 +22,7 @@ $smallHeading: 1.5rem;
 @mixin actionBtn() {
     cursor: pointer;
     padding: 1rem 4rem;
-    background-color: $ligthRed;
+    background-color: $darkRed;
     border-radius: 3rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -33,7 +34,6 @@ $smallHeading: 1.5rem;
     &:hover {
         transform: scale(0.9);
         background-color: $darkPurple;
-        color: $ligthRed;
         box-shadow: 0px 15px 20px -6px rgba(0, 0, 0, 0.4);
     }
 }
@@ -41,7 +41,7 @@ $smallHeading: 1.5rem;
 @mixin linkBtn {
     cursor: pointer;
     padding: 0.5rem 1rem;
-    background-color: $ligthRed;
+    background-color: $darkRed;
     border-radius: 3rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -49,15 +49,10 @@ $smallHeading: 1.5rem;
     transition: 600ms;
     margin: 1rem;
     border-style: none;
+    
     &:hover {
         margin-top: 0.2rem;
         background-color: $darkPurple;
-        color: $ligthRed;
         box-shadow: 0px 15px 20px -6px rgba(0, 0, 0, 0.4);
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
     }
 }
