@@ -1,41 +1,7 @@
 import { repoInformation, technologyStack } from "./dataToMap.js";
-const cardContainer = document.querySelector(".card-container")
+
+const cardContainer = document.querySelector(".card-container");
 const skillSection = document.querySelector(".skills-container");
-
-
-const hamburgerBtn= document.querySelector(".hamburger-btn");
-const list = document.querySelector(".nav-list");
-
-hamburgerBtn.addEventListener("click", () => {
-    list.classList.toggle("show");
-})
-
-const generateCard = arrayOfObjects => {
-
-    arrayOfObjects.map(data => {
-
-        cardContainer.innerHTML += `
-        
-        <article class="card">
-
-        <img src="${data.img} " alt="imagen de proyecto" loading="lazy">
-        <h4 class="title">${data.title}</h4>
-
-        <div class="hover-content">
-            
-            <button class="projects-links">
-                <a href="${data.linkToRepo}" >Repo</a>
-            </button>
-
-            <button class="projects-links">
-                <a href="${data.linkToPage}">Pagina</a>
-            </button>
-        </div>
-
-        </article>
-        `
-    });
-}
 
 const generateRow = (arrayOfObjects) => {
     arrayOfObjects.map(skill => {
@@ -51,13 +17,48 @@ const generateRow = (arrayOfObjects) => {
     });
 }
 
+const generateCard = arrayOfObjects => {
+    arrayOfObjects.map(data => {
+        cardContainer.innerHTML +=
+            `
+        <article class="card">
+
+            <img src="${data.img} " alt="imagen de proyecto" loading="lazy">
+            <h4 class="title">${data.title}</h4>
+
+            <div class="hover-content">
+                
+                <button class="projects-links">
+                    <a href="${data.linkToRepo}" >Repo</a>
+                </button>
+
+                <button class="projects-links">
+                    <a href="${data.linkToPage}">Pagina</a>
+                </button>
+            </div>
+
+        </article>
+        `
+    });
+}
+
 generateRow(technologyStack);
 generateCard(repoInformation);
 
+document.querySelector(".cv-button").addEventListener("click", () => {
 
-const dowloadCv = document.querySelector(".cv-button")
-dowloadCv.addEventListener("click", () => window.open("src/downloadable content/CV Nicolas Kuhn.pdf"))
+    window.open("src/downloadable content/CV Nicolas Kuhn.pdf")
+});
 
+
+// Mostrar y quitar el menu emergente en mobile.
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+const navList = document.querySelector(".nav-list");
+const links = navList.childNodes;
+
+hamburgerBtn.addEventListener("click", () => navList.classList.toggle("show"));
+
+links.forEach(li => li.addEventListener("click", () => navList.classList.remove("show")));
 
 window.sr = ScrollReveal();
 sr.reveal(".aboutMe-container", { duration: 1500 });

@@ -46,7 +46,7 @@
 
 .description {
     margin: 2.5rem 0;
-    width: 60%;
+    width: 75%;
     text-align: justify;
 }
 
@@ -54,7 +54,7 @@
     @include actionBtn();
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
     .aboutMe-container {
         @include flexAlignment(column, center, center);
     }
@@ -80,7 +80,10 @@
         .links {
             flex-flow: row;
             justify-content: space-evenly;
-            margin-bottom: 2.5rem;
+        }
+
+        img{
+            display: none;
         }
     }
 }

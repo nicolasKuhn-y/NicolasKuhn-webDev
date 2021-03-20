@@ -97,15 +97,14 @@ nav.desktop-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     width: 100%;
-    overflow-y: hidden;
+    height: 100vh;
   }
   .nav-list.show li {
     margin-bottom: 1rem;
-    font-size: 1rem;
   }
   .mobile-menu {
     display: block;
@@ -213,7 +212,7 @@ nav.desktop-nav {
 
 .description {
   margin: 2.5rem 0;
-  width: 60%;
+  width: 75%;
   text-align: justify;
 }
 
@@ -240,7 +239,7 @@ nav.desktop-nav {
           box-shadow: 0px 15px 20px -6px rgba(0, 0, 0, 0.4);
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .aboutMe-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -286,7 +285,9 @@ nav.desktop-nav {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-bottom: 2.5rem;
+  }
+  .image-container img {
+    display: none;
   }
 }
 
