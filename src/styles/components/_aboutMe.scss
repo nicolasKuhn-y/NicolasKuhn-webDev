@@ -2,30 +2,27 @@
 
 .aboutMe-container {
     @include flexCenter();
-    padding: 4.5rem 0.5rem;
     flex-flow: row nowrap;
 }
 
 .image-container {
-    @include flexAlignment(column, space-evenly, none);
+    @include flexAlignment(column, space-between, start);
     width: 50%;
 
     & img {
-        width: 85%;
-        height: 400px;
+        width: 75%;
+        height: 350px;
     }
 }
 
 .links-ul {
-    width: -50%;
-    @include flexAlignment(row, space-evenly, center);
+    @include flexAlignment(row, space-between, center);
+    max-width: 200px;
+    width: 100%;
 
-    i {
-        transition: 800ms;
-
-        &:hover {
-            transform: rotate(360deg);
-        }
+    i:hover {
+        transition: 500ms;
+        color: $darkRed;
     }
 }
 
@@ -47,7 +44,7 @@
     @include actionBtn();
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .aboutMe-container {
         @include flexAlignment(column, center, center);
     }

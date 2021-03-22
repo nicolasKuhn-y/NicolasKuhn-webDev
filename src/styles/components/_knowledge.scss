@@ -2,7 +2,6 @@
 
 .skills-container {
     @include flexAlignment(column wrap, none, center);
-    padding: 3rem 0;
 }
 
 .skill-row {
