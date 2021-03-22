@@ -1,4 +1,4 @@
-@import "../mixins&variables";
+@import "../utilities/mixins&variables";
 
 .contact-container {
     @include flexAlignment(column, center, center);

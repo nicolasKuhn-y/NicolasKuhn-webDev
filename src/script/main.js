@@ -1,3 +1,4 @@
+'use strict';
 import { repoInformation, technologyStack } from "./dataToMap.js";
 
 const cardContainer = document.querySelector(".card-container");
@@ -8,7 +9,7 @@ const generateRow = (arrayOfObjects) => {
         skillSection.innerHTML +=
             `
             <div class = "skill-row"> 
-                <div class = "skill-container">
+                <div class = "row-information">
                     <i class="${skill.icon}"></i>
                     <h4 class = "skill-title"> ${skill.technology}</h4>
                 </div>
@@ -45,11 +46,10 @@ const generateCard = arrayOfObjects => {
 generateRow(technologyStack);
 generateCard(repoInformation);
 
-document.querySelector(".cv-button").addEventListener("click", () => {
 
+document.querySelector(".cv-button").addEventListener("click", () => {
     window.open("src/downloadable content/CV Nicolas Kuhn.pdf")
 });
-
 
 // Mostrar y quitar el menu emergente en mobile.
 const hamburgerBtn = document.querySelector(".hamburger-btn");

@@ -1,4 +1,4 @@
-@import "../mixins&variables";
+@import "../utilities/mixins&variables";
 
 header {
     @include flexCenter();
@@ -14,10 +14,8 @@ nav.desktop-nav {
     width: 100%;
 }
 
-
 .nav-list > li {
     display: inline-block;
-    font-weight: 700;
     padding: 0 2rem;
 }
 
@@ -28,19 +26,19 @@ nav.desktop-nav {
 
 .navegation-links a:hover {
     top: 0.3rem;
-    border-bottom: 0.2rem solid $ligthRed;
+    border-bottom: 0.15rem solid $ligthRed;
 }
 
 .mobile-menu {
     display: none;
 
     i {
-        color: white;
+        color: #ffffff;
     }
 }
 
 @media Screen and (min-width: 768px) and (max-width: 1024px) {
-    .nav-list li{
+    .nav-list li {
         font-size: 1.2rem;
     }
 }
@@ -67,11 +65,10 @@ nav.desktop-nav {
         display: block;
         width: 100%;
         padding: 0.5rem;
+        overflow: hidden;
 
         button {
             background-color: transparent;
-            border-style: none;
-            outline: none;
         }
     }
 }

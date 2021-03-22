@@ -1,3 +1,5 @@
+'use strict';
+
 const technologyStack = [
     {
         technology: "HTML",
