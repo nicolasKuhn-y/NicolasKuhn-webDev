@@ -44,6 +44,13 @@ const repoInformation = [
         linkToRepo: "https://github.com/nicolasKuhn-y/Layout-tarjetas",
         linkToPage: "https://nicolaskuhn-y.github.io/Layout-tarjetas/",
     },
+
+    {
+        title: "Landing Page",
+        img: "src/images/fylo-landingPage.png",
+        linkToRepo: "https://github.com/nicolasKuhn-y/Fylo-Dark-Theme",
+        linkToPage: "https://fylo-dark-theme-ashy.vercel.app/",
+    }
 ];
 
 export { repoInformation, technologyStack }

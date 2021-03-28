@@ -5,7 +5,7 @@ const cardContainer = document.querySelector(".card-container");
 const skillSection = document.querySelector(".skills-container");
 
 const generateRow = (arrayOfObjects) => {
-    arrayOfObjects.map(skill => {
+    arrayOfObjects.forEach(skill => {
         skillSection.innerHTML +=
             `
             <div class = "skill-row"> 
@@ -19,7 +19,7 @@ const generateRow = (arrayOfObjects) => {
 }
 
 const generateCard = arrayOfObjects => {
-    arrayOfObjects.map(data => {
+    arrayOfObjects.forEach(data => {
         cardContainer.innerHTML +=
             `
         <article class="card">
