@@ -1,27 +1,24 @@
-'use strict';
 import { repoInformation, technologyStack } from "./dataToMap.js";
 
 const cardContainer = document.querySelector(".card-container");
 const skillSection = document.querySelector(".skills-container");
 
 const generateRow = (arrayOfObjects) => {
-    arrayOfObjects.forEach(skill => {
-        skillSection.innerHTML +=
-            `
+  arrayOfObjects.forEach((skill) => {
+    skillSection.innerHTML += `
             <div class = "skill-row"> 
                 <div class = "row-information">
                     <i class="${skill.icon}"></i>
                     <h4 class = "skill-title"> ${skill.technology}</h4>
                 </div>
             </div>
-            `
-    });
-}
+            `;
+  });
+};
 
-const generateCard = arrayOfObjects => {
-    arrayOfObjects.forEach(data => {
-        cardContainer.innerHTML +=
-            `
+const generateCard = (arrayOfObjects) => {
+  arrayOfObjects.forEach((data) => {
+    cardContainer.innerHTML += `
         <article class="card">
 
             <img src="${data.img} " alt="imagen de proyecto" loading="lazy">
@@ -39,16 +36,15 @@ const generateCard = arrayOfObjects => {
             </div>
 
         </article>
-        `
-    });
-}
+        `;
+  });
+};
 
 generateRow(technologyStack);
 generateCard(repoInformation);
 
-
 document.querySelector(".cv-button").addEventListener("click", () => {
-    window.open("src/downloadable content/CV Nicolas Kuhn.pdf")
+  window.open("src/downloadable content/CV Nicolas Kuhn.pdf");
 });
 
 // Mostrar y quitar el menu emergente en mobile.
@@ -58,10 +54,17 @@ const links = navList.childNodes;
 
 hamburgerBtn.addEventListener("click", () => navList.classList.toggle("show"));
 
-links.forEach(li => li.addEventListener("click", () => navList.classList.remove("show")));
+links.forEach((li) =>
+  li.addEventListener("click", () => navList.classList.remove("show"))
+);
 
 window.sr = ScrollReveal();
 sr.reveal(".aboutMe-container", { duration: 1500 });
-sr.reveal('.skill-row', { delay: 100, duration: 2000, distance: '2em', origin: "bottom" });
+sr.reveal(".skill-row", {
+  delay: 100,
+  duration: 2000,
+  distance: "2em",
+  origin: "bottom",
+});
 sr.reveal(".projects-container", { origin: "left", duration: 3500 });
 sr.reveal(".contact-container", { origin: "rigth", duration: 3500 });
